@@ -1,7 +1,7 @@
 # leanft_selenium
 What is LeanFT and how to combine LeanFT with Selenium
 # Add the LeanFT and Selenium libraries 
-
+```
     <dependencies>
         <dependency>
             <groupId>com.hp.lft</groupId>
@@ -164,11 +164,20 @@ What is LeanFT and how to combine LeanFT with Selenium
 There are some kinds of element such as WebElement, EditField, RadioGroup, ... They are defined by LeanFT. 
 ```
 <object type="WebElement" technology="Web">
-                    <name>SignInBtn</name>
-                    <codeName>SignInBtn</codeName>
-                    <identification>
-                        <properties>
-                            <property name="XPath" type="string" isRegExp="false">//*[@id="header"]/div[2]/div/div/nav/div[1]/a</property>
-                        </properties>
-                    </identification>
-                </object>
+    <name>SignInBtn</name>
+    <codeName>SignInBtn</codeName>
+    <identification>
+        <properties>
+            <property name="XPath" type="string" isRegExp="false">//*[@id="header"]/div[2]/div/div/nav/div[1]/a</property>
+        </properties>
+    </identification>
+</object>
+<object type="EditField" technology="Web">
+    <name>EmailAddress_SignUpTxt</name>
+    <codeName>EmailAddress_SignUpTxt</codeName>
+    <identification>
+        <properties>
+            <property name="Id" type="string" isRegExp="false">email_create</property>
+        </properties>
+    </identification>
+</object>
