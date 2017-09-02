@@ -161,7 +161,7 @@ What is LeanFT and how to combine LeanFT with Selenium
     </dependencies>
 
 #Page Object Model
-##There are some kinds of element such as WebElement, EditField, RadioGroup, ... They are defined by LeanFT. 
+There are some kinds of element such as WebElement, EditField, RadioGroup, ... They are defined by LeanFT. 
  <objects>
         <object type="Page" technology="Web">
             <name>Login - My Store</name>
