@@ -1,14 +1,6 @@
 # leanft_selenium
 What is LeanFT and how to combine LeanFT with Selenium
 # Add the LeanFT and Selenium libraries 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-    <modelVersion>4.0.0</modelVersion>
-    <groupId></groupId>
-    <artifactId></artifactId>
-    <version>1.0</version>
-    <name>LeanFT Application Model</name>
-    <description>LeanFT Application Model</description>
 
     <dependencies>
         <dependency>
@@ -168,79 +160,86 @@ What is LeanFT and how to combine LeanFT with Selenium
 
     </dependencies>
 
-    <repositories>
-        <!--<repository>
-                <id>Your repository's ID</id>
-                <name>Your repository's name</name>
-                <url>URL of the repository containing the LeanFT jar files</url>
-            </repository>-->
-    </repositories>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.10</version>
-                <executions>
-                    <execution>
-                        <id>add-source</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>appmodels</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-        <pluginManagement>
-            <plugins>
-                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>
-                                            org.codehaus.mojo
-                                        </groupId>
-                                        <artifactId>
-                                            build-helper-maven-plugin
-                                        </artifactId>
-                                        <versionRange>
-                                            [1.10,)
-                                        </versionRange>
-                                        <goals>
-                                            <goal>add-source</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <ignore></ignore>
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-</project>
+#Page Object Model
+##There are some kinds of element such as WebElement, EditField, RadioGroup, ... They are defined by LeanFT. 
+ <objects>
+        <object type="Page" technology="Web">
+            <name>Login - My Store</name>
+            <codeName>LoginMyStorePage</codeName>
+            <identification/>
+            <children>
+                <object type="WebElement" technology="Web">
+                    <name>SignInBtn</name>
+                    <codeName>SignInBtn</codeName>
+                    <identification>
+                        <properties>
+                            <property name="XPath" type="string" isRegExp="false">//*[@id="header"]/div[2]/div/div/nav/div[1]/a</property>
+                        </properties>
+                    </identification>
+                </object>
+                <object type="WebElement" technology="Web">
+                    <name>CreateAnAccountLbl</name>
+                    <codeName>CreateAnAccountLbl</codeName>
+                    <identification>
+                        <properties>
+                            <property name="XPath" type="string" isRegExp="false">//*[@id="create-account_form"]/h3</property>
+                        </properties>
+                    </identification>
+                </object>
+                <object type="WebElement" technology="Web">
+                    <name>AlreadyRegisteredLbl</name>
+                    <codeName>AlreadyRegisteredLbl</codeName>
+                    <identification>
+                        <properties>
+                            <property name="XPath" type="string" isRegExp="false">//*[@id="login_form"]/h3</property>
+                        </properties>
+                    </identification>
+                </object>
+                <object type="EditField" technology="Web">
+                    <name>EmailAddress_SignUpTxt</name>
+                    <codeName>EmailAddress_SignUpTxt</codeName>
+                    <identification>
+                        <properties>
+                            <property name="Id" type="string" isRegExp="false">email_create</property>
+                        </properties>
+                    </identification>
+                </object>
+                <object type="EditField" technology="Web">
+                    <name>EmailAddress_SignInTxt</name>
+                    <codeName>EmailAddress_SignInTxt</codeName>
+                    <identification>
+                        <properties>
+                            <property name="Id" type="string" isRegExp="false">email</property>
+                        </properties>
+                    </identification>
+                </object>
+                <object type="EditField" technology="Web">
+                    <name>Pwd_SignInTxt</name>
+                    <codeName>Pwd_SignInTxt</codeName>
+                    <identification>
+                        <properties>
+                            <property name="Id" type="string" isRegExp="false">passwd</property>
+                        </properties>
+                    </identification>
+                </object>
+                <object type="WebElement" technology="Web">
+                    <name>CreateAnAccountBtn</name>
+                    <codeName>CreateAnAccountBtn</codeName>
+                    <identification>
+                        <properties>
+                            <property name="XPath" type="string" isRegExp="false">//*[@id="SubmitCreate"]/span</property>
+                        </properties>
+                    </identification>
+                </object>
+                <object type="WebElement" technology="Web">
+                    <name>SubmitLoginBtn</name>
+                    <codeName>SubmitLoginBtn</codeName>
+                    <identification>
+                        <properties>
+                            <property name="XPath" type="string" isRegExp="false">//*[@id="SubmitLogin"]/span</property>
+                        </properties>
+                    </identification>
+                </object>
+            </children>
+        </object>
+    </objects>
