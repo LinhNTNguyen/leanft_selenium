@@ -159,7 +159,7 @@ What is LeanFT and how to combine LeanFT with Selenium
         </dependency>
 
     </dependencies>
-
+```
 #Page Object Model
 There are some kinds of element such as WebElement, EditField, RadioGroup, ... They are defined by LeanFT. 
 ```
@@ -181,3 +181,4 @@ There are some kinds of element such as WebElement, EditField, RadioGroup, ... T
         </properties>
     </identification>
 </object>
+```
