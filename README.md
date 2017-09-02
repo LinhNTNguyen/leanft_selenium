@@ -162,13 +162,7 @@ What is LeanFT and how to combine LeanFT with Selenium
 
 #Page Object Model
 There are some kinds of element such as WebElement, EditField, RadioGroup, ... They are defined by LeanFT. 
- <objects>
-        <object type="Page" technology="Web">
-            <name>Login - My Store</name>
-            <codeName>LoginMyStorePage</codeName>
-            <identification/>
-            <children>
-                <object type="WebElement" technology="Web">
+<object type="WebElement" technology="Web">
                     <name>SignInBtn</name>
                     <codeName>SignInBtn</codeName>
                     <identification>
@@ -177,69 +171,3 @@ There are some kinds of element such as WebElement, EditField, RadioGroup, ... T
                         </properties>
                     </identification>
                 </object>
-                <object type="WebElement" technology="Web">
-                    <name>CreateAnAccountLbl</name>
-                    <codeName>CreateAnAccountLbl</codeName>
-                    <identification>
-                        <properties>
-                            <property name="XPath" type="string" isRegExp="false">//*[@id="create-account_form"]/h3</property>
-                        </properties>
-                    </identification>
-                </object>
-                <object type="WebElement" technology="Web">
-                    <name>AlreadyRegisteredLbl</name>
-                    <codeName>AlreadyRegisteredLbl</codeName>
-                    <identification>
-                        <properties>
-                            <property name="XPath" type="string" isRegExp="false">//*[@id="login_form"]/h3</property>
-                        </properties>
-                    </identification>
-                </object>
-                <object type="EditField" technology="Web">
-                    <name>EmailAddress_SignUpTxt</name>
-                    <codeName>EmailAddress_SignUpTxt</codeName>
-                    <identification>
-                        <properties>
-                            <property name="Id" type="string" isRegExp="false">email_create</property>
-                        </properties>
-                    </identification>
-                </object>
-                <object type="EditField" technology="Web">
-                    <name>EmailAddress_SignInTxt</name>
-                    <codeName>EmailAddress_SignInTxt</codeName>
-                    <identification>
-                        <properties>
-                            <property name="Id" type="string" isRegExp="false">email</property>
-                        </properties>
-                    </identification>
-                </object>
-                <object type="EditField" technology="Web">
-                    <name>Pwd_SignInTxt</name>
-                    <codeName>Pwd_SignInTxt</codeName>
-                    <identification>
-                        <properties>
-                            <property name="Id" type="string" isRegExp="false">passwd</property>
-                        </properties>
-                    </identification>
-                </object>
-                <object type="WebElement" technology="Web">
-                    <name>CreateAnAccountBtn</name>
-                    <codeName>CreateAnAccountBtn</codeName>
-                    <identification>
-                        <properties>
-                            <property name="XPath" type="string" isRegExp="false">//*[@id="SubmitCreate"]/span</property>
-                        </properties>
-                    </identification>
-                </object>
-                <object type="WebElement" technology="Web">
-                    <name>SubmitLoginBtn</name>
-                    <codeName>SubmitLoginBtn</codeName>
-                    <identification>
-                        <properties>
-                            <property name="XPath" type="string" isRegExp="false">//*[@id="SubmitLogin"]/span</property>
-                        </properties>
-                    </identification>
-                </object>
-            </children>
-        </object>
-    </objects>
